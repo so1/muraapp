@@ -1,0 +1,5 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "90031995d0a1d8ee6e7969c922659dbb"
+build_time: [542884495, 984838000]
+inputs:
+  "/Users/chibatch/Documents/Projects/nishiogi_app/muraapp/muraappUITests/muraappUITests.swift": [538040714, 0]

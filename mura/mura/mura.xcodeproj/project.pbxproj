@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC4B37381E7B956100044BAC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4B37371E7B956100044BAC /* CoreLocation.framework */; };
+		DC6CFB2E1E794179002CD1A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6CFB2D1E794179002CD1A1 /* AppDelegate.swift */; };
+		DC6CFB301E794179002CD1A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6CFB2F1E794179002CD1A1 /* ViewController.swift */; };
+		DC6CFB331E794179002CD1A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC6CFB311E794179002CD1A1 /* Main.storyboard */; };
+		DC6CFB351E794179002CD1A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC6CFB341E794179002CD1A1 /* Assets.xcassets */; };
+		DC6CFB381E794179002CD1A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC6CFB361E794179002CD1A1 /* LaunchScreen.storyboard */; };
+		DC6CFB431E794179002CD1A1 /* muraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6CFB421E794179002CD1A1 /* muraTests.swift */; };
+		DC6CFB4E1E794179002CD1A1 /* muraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6CFB4D1E794179002CD1A1 /* muraUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC6CFB3F1E794179002CD1A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC6CFB221E794179002CD1A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC6CFB291E794179002CD1A1;
+			remoteInfo = mura;
+		};
+		DC6CFB4A1E794179002CD1A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC6CFB221E794179002CD1A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC6CFB291E794179002CD1A1;
+			remoteInfo = mura;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DC4B37371E7B956100044BAC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DC6CFB2A1E794179002CD1A1 /* mura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mura.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC6CFB2D1E794179002CD1A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC6CFB2F1E794179002CD1A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC6CFB321E794179002CD1A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC6CFB341E794179002CD1A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC6CFB371E794179002CD1A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DC6CFB391E794179002CD1A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC6CFB3E1E794179002CD1A1 /* muraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = muraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC6CFB421E794179002CD1A1 /* muraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = muraTests.swift; sourceTree = "<group>"; };
+		DC6CFB441E794179002CD1A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC6CFB491E794179002CD1A1 /* muraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = muraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC6CFB4D1E794179002CD1A1 /* muraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = muraUITests.swift; sourceTree = "<group>"; };
+		DC6CFB4F1E794179002CD1A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC6CFB271E794179002CD1A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC4B37381E7B956100044BAC /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC6CFB3B1E794179002CD1A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC6CFB461E794179002CD1A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC4B37361E7B956100044BAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC4B37371E7B956100044BAC /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC6CFB211E794179002CD1A1 = {
+			isa = PBXGroup;
+			children = (
+				DC6CFB2C1E794179002CD1A1 /* mura */,
+				DC6CFB411E794179002CD1A1 /* muraTests */,
+				DC6CFB4C1E794179002CD1A1 /* muraUITests */,
+				DC6CFB2B1E794179002CD1A1 /* Products */,
+				DC4B37361E7B956100044BAC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DC6CFB2B1E794179002CD1A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC6CFB2A1E794179002CD1A1 /* mura.app */,
+				DC6CFB3E1E794179002CD1A1 /* muraTests.xctest */,
+				DC6CFB491E794179002CD1A1 /* muraUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC6CFB2C1E794179002CD1A1 /* mura */ = {
+			isa = PBXGroup;
+			children = (
+				DC6CFB2D1E794179002CD1A1 /* AppDelegate.swift */,
+				DC6CFB2F1E794179002CD1A1 /* ViewController.swift */,
+				DC6CFB311E794179002CD1A1 /* Main.storyboard */,
+				DC6CFB341E794179002CD1A1 /* Assets.xcassets */,
+				DC6CFB361E794179002CD1A1 /* LaunchScreen.storyboard */,
+				DC6CFB391E794179002CD1A1 /* Info.plist */,
+			);
+			path = mura;
+			sourceTree = "<group>";
+		};
+		DC6CFB411E794179002CD1A1 /* muraTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC6CFB421E794179002CD1A1 /* muraTests.swift */,
+				DC6CFB441E794179002CD1A1 /* Info.plist */,
+			);
+			path = muraTests;
+			sourceTree = "<group>";
+		};
+		DC6CFB4C1E794179002CD1A1 /* muraUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DC6CFB4D1E794179002CD1A1 /* muraUITests.swift */,
+				DC6CFB4F1E794179002CD1A1 /* Info.plist */,
+			);
+			path = muraUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC6CFB291E794179002CD1A1 /* mura */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC6CFB521E794179002CD1A1 /* Build configuration list for PBXNativeTarget "mura" */;
+			buildPhases = (
+				DC6CFB261E794179002CD1A1 /* Sources */,
+				DC6CFB271E794179002CD1A1 /* Frameworks */,
+				DC6CFB281E794179002CD1A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mura;
+			productName = mura;
+			productReference = DC6CFB2A1E794179002CD1A1 /* mura.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC6CFB3D1E794179002CD1A1 /* muraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC6CFB551E794179002CD1A1 /* Build configuration list for PBXNativeTarget "muraTests" */;
+			buildPhases = (
+				DC6CFB3A1E794179002CD1A1 /* Sources */,
+				DC6CFB3B1E794179002CD1A1 /* Frameworks */,
+				DC6CFB3C1E794179002CD1A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC6CFB401E794179002CD1A1 /* PBXTargetDependency */,
+			);
+			name = muraTests;
+			productName = muraTests;
+			productReference = DC6CFB3E1E794179002CD1A1 /* muraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DC6CFB481E794179002CD1A1 /* muraUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC6CFB581E794179002CD1A1 /* Build configuration list for PBXNativeTarget "muraUITests" */;
+			buildPhases = (
+				DC6CFB451E794179002CD1A1 /* Sources */,
+				DC6CFB461E794179002CD1A1 /* Frameworks */,
+				DC6CFB471E794179002CD1A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC6CFB4B1E794179002CD1A1 /* PBXTargetDependency */,
+			);
+			name = muraUITests;
+			productName = muraUITests;
+			productReference = DC6CFB491E794179002CD1A1 /* muraUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC6CFB221E794179002CD1A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = kroon;
+				TargetAttributes = {
+					DC6CFB291E794179002CD1A1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4E6HM5L728;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					DC6CFB3D1E794179002CD1A1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DC6CFB291E794179002CD1A1;
+					};
+					DC6CFB481E794179002CD1A1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DC6CFB291E794179002CD1A1;
+					};
+				};
+			};
+			buildConfigurationList = DC6CFB251E794179002CD1A1 /* Build configuration list for PBXProject "mura" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC6CFB211E794179002CD1A1;
+			productRefGroup = DC6CFB2B1E794179002CD1A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC6CFB291E794179002CD1A1 /* mura */,
+				DC6CFB3D1E794179002CD1A1 /* muraTests */,
+				DC6CFB481E794179002CD1A1 /* muraUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC6CFB281E794179002CD1A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC6CFB381E794179002CD1A1 /* LaunchScreen.storyboard in Resources */,
+				DC6CFB351E794179002CD1A1 /* Assets.xcassets in Resources */,
+				DC6CFB331E794179002CD1A1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC6CFB3C1E794179002CD1A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC6CFB471E794179002CD1A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC6CFB261E794179002CD1A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC6CFB301E794179002CD1A1 /* ViewController.swift in Sources */,
+				DC6CFB2E1E794179002CD1A1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC6CFB3A1E794179002CD1A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC6CFB431E794179002CD1A1 /* muraTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC6CFB451E794179002CD1A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC6CFB4E1E794179002CD1A1 /* muraUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC6CFB401E794179002CD1A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC6CFB291E794179002CD1A1 /* mura */;
+			targetProxy = DC6CFB3F1E794179002CD1A1 /* PBXContainerItemProxy */;
+		};
+		DC6CFB4B1E794179002CD1A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC6CFB291E794179002CD1A1 /* mura */;
+			targetProxy = DC6CFB4A1E794179002CD1A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DC6CFB311E794179002CD1A1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC6CFB321E794179002CD1A1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC6CFB361E794179002CD1A1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC6CFB371E794179002CD1A1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC6CFB501E794179002CD1A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kotaro Chiba (98FTL3Q53F)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DC6CFB511E794179002CD1A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kotaro Chiba (98FTL3Q53F)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC6CFB531E794179002CD1A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kotaro Chiba (98FTL3Q53F)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4E6HM5L728;
+				INFOPLIST_FILE = mura/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mura.nishiogi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DC6CFB541E794179002CD1A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kotaro Chiba (98FTL3Q53F)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4E6HM5L728;
+				INFOPLIST_FILE = mura/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mura.nishiogi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		DC6CFB561E794179002CD1A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = muraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KRN.muraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mura.app/mura";
+			};
+			name = Debug;
+		};
+		DC6CFB571E794179002CD1A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = muraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KRN.muraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mura.app/mura";
+			};
+			name = Release;
+		};
+		DC6CFB591E794179002CD1A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = muraUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KRN.muraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = mura;
+			};
+			name = Debug;
+		};
+		DC6CFB5A1E794179002CD1A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = muraUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KRN.muraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = mura;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC6CFB251E794179002CD1A1 /* Build configuration list for PBXProject "mura" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC6CFB501E794179002CD1A1 /* Debug */,
+				DC6CFB511E794179002CD1A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC6CFB521E794179002CD1A1 /* Build configuration list for PBXNativeTarget "mura" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC6CFB531E794179002CD1A1 /* Debug */,
+				DC6CFB541E794179002CD1A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC6CFB551E794179002CD1A1 /* Build configuration list for PBXNativeTarget "muraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC6CFB561E794179002CD1A1 /* Debug */,
+				DC6CFB571E794179002CD1A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC6CFB581E794179002CD1A1 /* Build configuration list for PBXNativeTarget "muraUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC6CFB591E794179002CD1A1 /* Debug */,
+				DC6CFB5A1E794179002CD1A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC6CFB221E794179002CD1A1 /* Project object */;
+}
