@@ -14,18 +14,17 @@ import UserNotifications
 class ViewController: UIViewController, CLLocationManagerDelegate,UNUserNotificationCenterDelegate {
 
     private let locationManager = CLLocationManager()
-    private var monitoredRegion: CLCircularRegion?
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        // Delegateの設定
+        self.locationManager.delegate = self
+        UNUserNotificationCenter.current().delegate = self
         
         self.requestPrivasyAccess()
         self.startMonitoring()
-        
-        self.locationManager.delegate = self
-        UNUserNotificationCenter.current().delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,27 +49,38 @@ class ViewController: UIViewController, CLLocationManagerDelegate,UNUserNotifica
         self.setGeoFence("Project1", lat: 35.70692833, lng: 139.59999166)
         self.setGeoFence("Project2", lat: 35.70701166, lng: 139.59945500)
         self.setGeoFence("MyHome",   lat: 35.720316,   lng: 139.608254)
-
     }
     
+    /**
+     観測の停止
+     */
     private func stopMonitoring() {
-        if let monitoredRegion = self.monitoredRegion {
-            self.locationManager.stopMonitoring(for: monitoredRegion)
+        self.locationManager.monitoredRegions.forEach { region in
+            self.locationManager.stopMonitoring(for: region)
         }
     }
     
     private func setGeoFence(_ name: String, lat: Double, lng: Double) {
-        print("add \(name) -> \(lat), \(lng)")
         
         let center = CLLocationCoordinate2DMake(lat, lng)
-        self.monitoredRegion = CLCircularRegion(center: center, radius: 1, identifier: name)
-        self.locationManager.startMonitoring(for: self.monitoredRegion!)
+        let region = CLCircularRegion(center: center, radius: 1, identifier: name)
+        
+        // 観測開始
+        self.locationManager.startMonitoring(for: region)
     }
     
     // CoreLocation
     func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
         self.sendNotification("Start", message: "\(region.identifier)の観測を開始しました", title: "観測開始")
         print("観測開始")
+        
+        // Set<CLRegion>
+        
+        self.locationManager.monitoredRegions.forEach { region in
+            print(region)
+        }
+        
+        print(self.locationManager.monitoredRegions.count)
     }
     
     func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error) {
@@ -108,7 +118,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate,UNUserNotifica
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        print("送るよ \(notification)")
         completionHandler([.alert, .sound])
     }
 
