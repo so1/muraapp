@@ -69,7 +69,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate,UNUserNotifica
     
     // CoreLocation
     func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
-        self.sendNotification("Start", message: "観測開始", title: "ジオフェンスのテストです")
+        self.sendNotification("Start", message: "\(region.identifier)の観測を開始しました", title: "観測開始")
         print("観測開始")
     }
     
@@ -78,12 +78,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate,UNUserNotifica
     }
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        self.sendNotification("Enter", message: "領域に入りましたよ!!!!", title: "ジオフェンスのテストです")
+        self.sendNotification("Enter", message: "\(region.identifier)に入りましたよ!!!!", title: "ジオフェンスのテストです")
         
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-        self.sendNotification("Exit", message: "領域からでましたよ!!!!", title: "ジオフェンスのテストです")
+        self.sendNotification("Exit", message: "\(region.identifier)からでましたよ!!!!", title: "ジオフェンスのテストです")
     }
     
     private func sendNotification(_ id: String, message: String, title: String) {

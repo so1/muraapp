@@ -109,6 +109,8 @@
 		DC6CFB2C1E794179002CD1A1 /* mura */ = {
 			isa = PBXGroup;
 			children = (
+				DCAB41D41E80CBEF0099BE9B /* Controller */,
+				DCAB41CF1E80CB2F0099BE9B /* Model */,
 				DC6CFB2D1E794179002CD1A1 /* AppDelegate.swift */,
 				DC6CFB2F1E794179002CD1A1 /* ViewController.swift */,
 				DC6CFB311E794179002CD1A1 /* Main.storyboard */,
@@ -135,6 +137,36 @@
 				DC6CFB4F1E794179002CD1A1 /* Info.plist */,
 			);
 			path = muraUITests;
+			sourceTree = "<group>";
+		};
+		DCAB41CF1E80CB2F0099BE9B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DCAB41D11E80CB400099BE9B /* Entity */,
+				DCAB41D01E80CB380099BE9B /* Repository */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DCAB41D01E80CB380099BE9B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Repository;
+			sourceTree = "<group>";
+		};
+		DCAB41D11E80CB400099BE9B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		DCAB41D41E80CBEF0099BE9B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,6 +470,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mura.nishiogi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -454,6 +488,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mura.nishiogi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
