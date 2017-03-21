@@ -35,7 +35,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate,UNUserNotifica
 
     private func requestPrivasyAccess() {
         self.manager.requestAlwaysAuthorization()
-        self.manager.distanceFilter = 100
+        self.manager.distanceFilter = 1
         self.manager.pausesLocationUpdatesAutomatically = true
     }
     
