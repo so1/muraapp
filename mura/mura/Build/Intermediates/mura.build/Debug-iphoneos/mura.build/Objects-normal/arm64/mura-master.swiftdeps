@@ -1,6 +1,0 @@
-version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
-options: "0b50280769e68519e5205b361e3eb959"
-build_time: [543242797, 582818000]
-inputs:
-  "/Users/chibatch/Documents/Projects/nishiogi_app/mura/mura/mura/ViewController.swift": [543242797, 0]
-  "/Users/chibatch/Documents/Projects/nishiogi_app/mura/mura/mura/AppDelegate.swift": [543047955, 0]
