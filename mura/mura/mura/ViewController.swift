@@ -71,16 +71,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate,UNUserNotifica
     
     // CoreLocation
     func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
-        self.sendNotification("Start", message: "\(region.identifier)の観測を開始しました", title: "観測開始")
         print("観測開始")
-        
-        // Set<CLRegion>
-        
-        self.locationManager.monitoredRegions.forEach { region in
-            print(region)
-        }
-        
-        print(self.locationManager.monitoredRegions.count)
     }
     
     func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error) {
@@ -88,21 +79,20 @@ class ViewController: UIViewController, CLLocationManagerDelegate,UNUserNotifica
     }
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        self.sendNotification("Enter", message: "\(region.identifier)に入りましたよ!!!!", title: "ジオフェンスのテストです")
+        self.sendNotification("Enter", message: "\(region.identifier)に入りましたよ!!!!")
         
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-        self.sendNotification("Exit", message: "\(region.identifier)からでましたよ!!!!", title: "ジオフェンスのテストです")
+        self.sendNotification("Exit", message: "\(region.identifier)からでましたよ!!!!")
     }
     
-    private func sendNotification(_ id: String, message: String, title: String) {
+    private func sendNotification(_ id: String, message: String) {
         let center = UNUserNotificationCenter.current()
         
         // NotificationContent
         let content = UNMutableNotificationContent()
-        content.title = "title"
-        content.subtitle = "サンプルのsubtitleです"
+        content.title = id
         content.body = message
         content.badge = 0
         content.sound = .default()
