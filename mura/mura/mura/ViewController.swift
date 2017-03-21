@@ -13,7 +13,7 @@ import UserNotifications
 
 class ViewController: UIViewController, CLLocationManagerDelegate,UNUserNotificationCenterDelegate {
 
-    private let manager = CLLocationManager()
+    private let locationManager = CLLocationManager()
     private var monitoredRegion: CLCircularRegion?
 
     
@@ -24,7 +24,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate,UNUserNotifica
         self.requestPrivasyAccess()
         self.startMonitoring()
         
-        self.manager.delegate = self
+        self.locationManager.delegate = self
         UNUserNotificationCenter.current().delegate = self
     }
 
@@ -34,9 +34,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate,UNUserNotifica
     }
 
     private func requestPrivasyAccess() {
-        self.manager.requestAlwaysAuthorization()
-        self.manager.distanceFilter = 1
-        self.manager.pausesLocationUpdatesAutomatically = true
+        self.locationManager.requestAlwaysAuthorization()
+        self.locationManager.distanceFilter = 1
+        self.locationManager.pausesLocationUpdatesAutomatically = true
     }
     
     private func startMonitoring() {
@@ -55,7 +55,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate,UNUserNotifica
     
     private func stopMonitoring() {
         if let monitoredRegion = self.monitoredRegion {
-            self.manager.stopMonitoring(for: monitoredRegion)
+            self.locationManager.stopMonitoring(for: monitoredRegion)
         }
     }
     
@@ -64,7 +64,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate,UNUserNotifica
         
         let center = CLLocationCoordinate2DMake(lat, lng)
         self.monitoredRegion = CLCircularRegion(center: center, radius: 1, identifier: name)
-        self.manager.startMonitoring(for: self.monitoredRegion!)
+        self.locationManager.startMonitoring(for: self.monitoredRegion!)
     }
     
     // CoreLocation
