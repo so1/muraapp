@@ -34,11 +34,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate,UNUserNotifica
         self.currentAreaLabel.text = ""
         
         // 取得済みのジオフェンスを消して再登録
-//        self.stopMonitoring()
-        self.startMonitoring()
-        
-        // テスト用に位置情報取得
-        self.locationManager.startUpdatingLocation()
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,17 +56,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate,UNUserNotifica
         
         self.setGeoFence("ChatWork", lat: 35.717704, lng: 139.788931)
         self.setGeoFence("MyHome", lat: 35.720316, lng: 139.608254)
-
         self.setGeoFence("Project",  lat: 35.704104, lng: 139.601802)
         self.setGeoFence("SevenEleven", lat: 35.704304, lng: 139.601663)
         self.setGeoFence("MiniStop", lat: 35.704082, lng: 139.609332)
         self.setGeoFence("Nishiogi1", lat: 35.704173, lng: 139.601244)
         self.setGeoFence("MyBasket", lat: 35.710814, lng: 139.601749)
-
         self.setGeoFence("JRKichijoji", lat: 35.703149, lng: 139.579809)
         self.setGeoFence("JRNishiogikubo", lat: 35.703788, lng: 139.599557)
         self.setGeoFence("JROgikubo",   lat: 35.704498, lng: 139.619058)
-        
         self.setGeoFence("OsakaSakurai",   lat: 34.816792, lng: 135.460702)
         self.setGeoFence("OsakaFamilyMart", lat: 34.813948, lng: 135.452103)
         self.setGeoFence("Osaka1", lat: 34.817703, lng: 135.455069)
@@ -86,9 +78,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate,UNUserNotifica
      観測の停止
      */
     private func stopMonitoring() {
+        let monitoredRegions = DispatchGroup()
+        
         self.locationManager.monitoredRegions.forEach { region in
-            self.locationManager.stopMonitoring(for: region)
+            DispatchQueue(label: region.identifier, attributes: .concurrent).async(group: monitoredRegions) {
+                self.locationManager.stopMonitoring(for: region)
+
+                print("観測停止: \(region.identifier)")
+            }
         }
+        
+        monitoredRegions.notify(queue: DispatchQueue.main) {
+            print("all regions deleted.")
+        }
+//        self.locationManager.monitoredRegions.forEach { region in
+//            self.locationManager.stopMonitoring(for: region)
+//        }
     }
     
     // ジオフェンスの設定
@@ -99,8 +104,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate,UNUserNotifica
         
         // 観測開始
         self.locationManager.startMonitoring(for: region)
-        
-        self.locationManager.requestState(for: region)
     }
     
     func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
@@ -118,16 +121,38 @@ class ViewController: UIViewController, CLLocationManagerDelegate,UNUserNotifica
     
     // CoreLocation
     
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if (status == .authorizedAlways) {
+            print("request ok")
+            
+            print("monitored: \(self.locationManager.monitoredRegions.count)")
+            
+            self.stopMonitoring()
+            self.startMonitoring()
+            
+            // テスト用に位置情報取得
+            self.locationManager.startUpdatingLocation()
+
+        } else {
+            print("request ng")
+            
+            // アラート出す
+        }
+    }
+    
     // 観測開始
     func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
         print("\(region.identifier) 観測開始")
         
+        self.locationManager.requestState(for: region)
 //        manager.requestState(for: region)
     }
     
     // 観測終了
     func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error) {
-        print("\(region?.identifier) 観測の開始に失敗しました！")
+        print("\(region?.identifier) 観測の開始に失敗しました！: \(error)")
+        
+        manager.startMonitoring(for: region!)
     }
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
